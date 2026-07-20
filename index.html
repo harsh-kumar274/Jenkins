@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Student Details</title>
+	<style>
+		:root {
+			color-scheme: light;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			margin: 0;
+			min-height: 100vh;
+			display: grid;
+			place-items: center;
+			background: linear-gradient(135deg, #eef2ff 0%, #e0f2fe 100%);
+			color: #1f2937;
+		}
+
+		.card {
+			width: min(92vw, 460px);
+			padding: 32px 28px;
+			background: rgba(255, 255, 255, 0.9);
+			border: 1px solid rgba(255, 255, 255, 0.7);
+			border-radius: 20px;
+			box-shadow: 0 18px 50px rgba(15, 23, 42, 0.12);
+			backdrop-filter: blur(8px);
+		}
+
+		h1 {
+			margin: 0 0 20px;
+			font-size: 1.8rem;
+			text-align: center;
+			color: #0f172a;
+		}
+
+		.detail {
+			display: flex;
+			justify-content: space-between;
+			gap: 16px;
+			padding: 14px 0;
+			border-bottom: 1px solid #e5e7eb;
+			font-size: 1.05rem;
+		}
+
+		.detail:last-child {
+			border-bottom: none;
+		}
+
+		.label {
+			font-weight: 700;
+			color: #334155;
+		}
+
+		.value {
+			font-weight: 600;
+			color: #111827;
+			text-align: right;
+		}
+	</style>
+</head>
+<body>
+	<main class="card" aria-label="Student details card">
+		<h1>Student Details</h1>
+
+		<div class="detail">
+			<span class="label">Name:</span>
+			<span class="value">HARSH KUMAR</span>
+		</div>
+
+		<div class="detail">
+			<span class="label">Reg Number:</span>
+			<span class="value">12309884</span>
+		</div>
+
+		<div class="detail">
+			<span class="label">Batch ID:</span>
+			<span class="value">2027</span>
+		</div>
+	</main>
+</body>
+</html>

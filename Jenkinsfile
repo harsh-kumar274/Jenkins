@@ -1,29 +1,31 @@
-pipeline{
-    agent any{
-        stages
-        {
-            stage('Checkout')
-            {
-                steps{
-git url:'https://github.com/harsh-kumar274/Jenkins'
-branch : 'main'
-                }
+pipeline {
+    agent any
+
+    stages {
+
+        stage('Checkout') {
+            steps {
+                git url: 'https://github.com/snehachopra1611/html_project2.git',
+                    branch: 'main'
             }
-                stage('Test')
-                {
-                    steps{
-sh 'test -f index.html'
-exho 'File Found'
-                    }
-                }
-        }    
-        post{
-            sucess{
-            echo 'Pipeline Executes Successfully'
+        }
+
+        stage('Test') {
+            steps {
+                sh 'test -f index.html'
+                echo 'Application file index.html found'
             }
-            failure{
+        }
+
+    }
+
+    post {
+        success {
+            echo 'Pipeline Completed Successfully'
+        }
+
+        failure {
             echo 'Pipeline Failed'
-            }
         }
     }
 }
